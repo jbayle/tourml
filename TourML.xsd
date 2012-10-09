@@ -288,4 +288,6 @@
   <xsd:attribute name="name" type="xsd:string"/>
   <xsd:attribute name="part" type="xsd:string"/>
   <xsd:attribute name="type" type="xsd:string"/>
+  <xsd:attribute name="initialsource" type="xsd:string"/>
+  <xsd:attribute name="downloadmode" type="xsd:string"/>
 </xsd:schema>
