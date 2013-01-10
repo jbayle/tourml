@@ -172,7 +172,6 @@
     <xsd:attribute ref="tourml:format"/>
     <xsd:attribute ref="tourml:lastModified" use="optional"/>
     <xsd:attribute ref="tourml:part" use="optional"/>
-    <xsd:attribute ref="tourml:sizeOfData" use="optional">
       <xsd:annotation>
         <xsd:documentation>SizeOfData represents size of asset file in octets</xsd:documentation>
       </xsd:annotation>
@@ -224,11 +223,11 @@
   </xsd:complexType>
   <xsd:complexType name="StopRefType">
     <xsd:attribute ref="tourml:id" use="required"/>
+    <xsd:attribute ref="tourml:usage" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="AssetRefType">
     <xsd:attribute ref="tourml:id" use="required"/>
     <xsd:attribute ref="tourml:usage"/>
-    <xsd:attribute ref="tourml:title"/>
   </xsd:complexType>
   <xsd:complexType name="TitleType">
     <xsd:annotation>
@@ -253,7 +252,8 @@
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PropertySetType">
-    <xsd:annotation>
+     <xsd:attribute ref="name" use="optional"/>
+   <xsd:annotation>
       <xsd:documentation>Property sets allow for the addition of
 				application specific metadata to Assets and Stops.
 			</xsd:documentation>
@@ -269,7 +269,7 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="xsd:anyType">
-        <xsd:attribute ref="tourml:name" use="required"/>
+        <xsd:attribute ref="tourml:name" use="optional"/>
         <xsd:attribute ref="xml:lang" use="optional"/>
       </xsd:extension>
     </xsd:complexContent>
@@ -288,6 +288,4 @@
   <xsd:attribute name="name" type="xsd:string"/>
   <xsd:attribute name="part" type="xsd:string"/>
   <xsd:attribute name="type" type="xsd:string"/>
-  <xsd:attribute name="initialsource" type="xsd:string"/>
-  <xsd:attribute name="downloadmode" type="xsd:string"/>
 </xsd:schema>
