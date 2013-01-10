@@ -146,12 +146,13 @@
         </xsd:annotation>
       </xsd:element>
       <!--<xsd:element name="PropertySet" type="tourml:PropertySetType" minOccurs="0" maxOccurs="1"/>-->
-      <xsd:element name="PropertySet" type="tourml:PropertySetType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="PropertySet" type="tourml:PropertySetType" minOccurs="0" maxOccurs="unbounded">
 	<xsd:annotation>
           	<xsd:documentation>It is possible to have multi properties set for stop. 
 				In my case to set up differents (GPS) coordinates for a unique stop.
 		</xsd:documentation>
         </xsd:annotation>
+      </xsd:element>
 
     </xsd:sequence>
     <xsd:attribute ref="tourml:id" use="required"/>
@@ -248,7 +249,6 @@
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PropertySetType">
-     <xsd:attribute ref="name" use="optional"/>
    <xsd:annotation>
       <xsd:documentation>Property sets allow for the addition of
 				application specific metadata to Assets and Stops.
@@ -257,6 +257,8 @@
     <xsd:sequence>
       <xsd:element name="Property" type="tourml:PropertyType" minOccurs="1" maxOccurs="unbounded"/>
     </xsd:sequence>
+    <xsd:attribute ref="tourml:name" use="optional"/>
+
   </xsd:complexType>
   <xsd:complexType name="PropertyType">
     <xsd:annotation>
