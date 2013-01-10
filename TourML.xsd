@@ -145,6 +145,13 @@
 					</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="StopRef" type="tourml:StopRefType" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>A Stop reference is used to refer to a
+            specific usage of an another Stop. We can refer to another node by this way.
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <!--<xsd:element name="PropertySet" type="tourml:PropertySetType" minOccurs="0" maxOccurs="1"/>-->
       <xsd:element name="PropertySet" type="tourml:PropertySetType" minOccurs="0" maxOccurs="unbounded">
 	<xsd:annotation>
