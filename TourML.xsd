@@ -172,10 +172,6 @@
     <xsd:attribute ref="tourml:format"/>
     <xsd:attribute ref="tourml:lastModified" use="optional"/>
     <xsd:attribute ref="tourml:part" use="optional"/>
-      <xsd:annotation>
-        <xsd:documentation>SizeOfData represents size of asset file in octets</xsd:documentation>
-      </xsd:annotation>
-    </xsd:attribute>
   </xsd:complexType>
   <xsd:complexType name="AssetContentType">
     <xsd:sequence>
