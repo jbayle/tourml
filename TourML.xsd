@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="xs3p/xs3p.xsl"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tourml="http://www.imamuseum.org/TourML/2011/11" targetNamespace="http://www.imamuseum.org/TourML/2011/11" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wz="http://www.wezit.io/TourML/2014/11/" xmlns:tourml="http://www.imamuseum.org/TourML/2011/11" targetNamespace="http://www.imamuseum.org/TourML/2011/11" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
   <!-- Element declarations -->
   <xsd:element name="Tour" type="tourml:TourType">
@@ -20,11 +20,13 @@
 			</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
-      <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="TourSetMetadata" type="tourml:TourMetadataType" minOccurs="0"/>
         <xsd:element ref="tourml:Tour" minOccurs="1" maxOccurs="unbounded"/>
         <xsd:element name="TourRef" type="tourml:TourRefType" minOccurs="1" maxOccurs="unbounded"/>
-      </xsd:choice>
+      </xsd:sequence>
       <xsd:attribute ref="tourml:lastModified" use="optional"/>
+      <xsd:attribute ref="wz:languages" use="optional"/>
     </xsd:complexType>
   </xsd:element>
   <!-- Type declarations -->
@@ -117,8 +119,12 @@
 				TourML tours together in one TourML instance.
 			</xsd:documentation>
     </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="PropertySet" type="tourml:PropertySetType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
     <xsd:attribute ref="tourml:uri" use="required"/>
     <xsd:attribute ref="tourml:lastModified" use="optional"/>
+    <xsd:attribute ref="xml:lang" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="AssetType">
     <xsd:sequence>
