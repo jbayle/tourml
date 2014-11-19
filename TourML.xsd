@@ -23,7 +23,7 @@
       <xsd:sequence>
         <xsd:element name="TourSetMetadata" type="tourml:TourMetadataType" minOccurs="0"/>
         <xsd:element ref="tourml:Tour" minOccurs="1" maxOccurs="unbounded"/>
-        <xsd:element name="Asset" type="tourml:AssetType" maxOccurs="unbounded">
+        <xsd:element name="Asset" type="tourml:AssetType" maxOccurs="unbounded"/>
         <xsd:element name="TourRef" type="tourml:TourRefType" minOccurs="1" maxOccurs="unbounded"/>
       </xsd:sequence>
       <xsd:attribute ref="tourml:lastModified" use="optional"/>
