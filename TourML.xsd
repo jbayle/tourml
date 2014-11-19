@@ -188,7 +188,7 @@
     <xsd:attribute ref="tourml:lastModified" use="optional"/>
     <xsd:attribute ref="tourml:part" use="optional" />
     <xsd:attribute ref="tourml:md5" use="optional" />
-    <sxd:attribute ref="tourml:size" use="optional" />
+    <sxd:attribute ref="wz:size" use="optional" />
   </xsd:complexType>
   <xsd:complexType name="AssetContentType">
     <xsd:sequence>
