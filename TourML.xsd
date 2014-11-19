@@ -303,4 +303,6 @@
   <xsd:attribute name="part" type="xsd:string"/>
   <xsd:attribute name="type" type="xsd:string"/>
   <xsd:attribute name="languages" type="xsd:string"/>
+  <xsd:attribute name="size" type="xsd:string"/>
+  <xsd:attribute name="md5" type="xsd:string"/>
 </xsd:schema>
