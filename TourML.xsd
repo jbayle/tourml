@@ -27,7 +27,7 @@
         <xsd:element name="TourRef" type="tourml:TourRefType" minOccurs="1" maxOccurs="unbounded"/>
       </xsd:sequence>
       <xsd:attribute ref="tourml:lastModified" use="optional"/>
-      <xsd:attribute ref="tourml:languages" use="optional"/>
+      <xsd:attribute ref="wz:languages" use="optional"/>
     </xsd:complexType>
   </xsd:element>
   <!-- Type declarations -->
@@ -186,7 +186,9 @@
     <xsd:attribute ref="tourml:uri"/>
     <xsd:attribute ref="tourml:format"/>
     <xsd:attribute ref="tourml:lastModified" use="optional"/>
-    <xsd:attribute ref="tourml:part" use="optional"/>
+    <xsd:attribute ref="tourml:part" use="optional" />
+    <xsd:attribute ref="tourml:md5" use="optional" />
+    <sxd:attribute ref="tourml:size" use="optional" />
   </xsd:complexType>
   <xsd:complexType name="AssetContentType">
     <xsd:sequence>
