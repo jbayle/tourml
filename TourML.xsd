@@ -228,6 +228,7 @@
   <xsd:complexType name="AssetRefType">
     <xsd:attribute ref="tourml:id" use="required"/>
     <xsd:attribute ref="tourml:usage"/>
+    <xsd:attribute ref="xml:lang" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="TitleType">
     <xsd:annotation>
